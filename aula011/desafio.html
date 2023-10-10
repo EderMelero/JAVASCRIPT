@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+</head>
+<body>
+    <h1>Paises</h1>
+    Qual o seu páis de origem? <input type="text" name="tex" id="tex">
+   
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+        
+    </div>
+</body>
+<script>
+   function verificar(){
+    var tex = window.document.querySelector('input#tex')
+    var res = window.document.querySelector('div#res')
+    var país = (tex.value)
+
+    if (país == 'Brasil') {
+        res.innerHTML = `<p>Você é <strong>Brasileiro</strong></p>`
+    } else {
+        res.innerHTML = `<p> Você é <strong>Estrangeiro</strong></p>`
+    }
+    res.innerHTML +=`<p> Isso porque você nasceu em <strong>${país}</strong></p>`
+   }
+
+
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavitcho</title>
+    <style>
+        body {
+            font-size: 2em;
+        }
+    </style>
+
+</head>
+<body>
+    Qual o seu primeiro nome: <input type="text" name="txtn" id="txtn">
+    <input type="button" value="Verificar Masculinidade" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    
+</body>
+<script>
+    function verificar(){
+        var txtn = window.document.getElementById('txtn')
+        var res = window.document.getElementById('res')
+        var nome = (txtn.value)
+
+        
+        if (nome == 'Flávio') {
+            res.innerHTML = `<p>Você é super <strong>BOIOLA</strong> hmmmmmmmmm bichona<p>`
+                res.style.color = 'pink'
+        } else {
+            res.innerHTML = `<p>Você não é <strong>BOIOLA</strong></p>`
+            res.style.color = 'black'
+        }
+    }
+
+</script>
+</html>
